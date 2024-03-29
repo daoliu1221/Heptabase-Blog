@@ -1,16 +1,6 @@
 name: Fetch JSON Data
 
 on:
-<<<<<<< HEAD
-<<<<<<< HEAD
-  schedule:
-    - cron: '*/5  * * * *' # 每天 UTC 时间 04:00 执行
-=======
->>>>>>> jiang
-=======
-  # schedule:
-  #   - cron: '*/5  * * * *' # 每天 UTC 时间 04:00 执行
->>>>>>> 17c87b7ddd44f0e5b34dbb5a396009249b2fb0b2
   workflow_dispatch:
 
 jobs:
@@ -20,31 +10,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
-<<<<<<< HEAD
-          ref:'jiang'
-=======
-          ref: 'jiang' 
->>>>>>> jiang
+          ref: 'main'
 
       - name: Fetch JSON data
         run: |
-          curl https://api.dabing.one > src/resources/data.json
-<<<<<<< HEAD
+          curl https://api.dabing.one?whiteboard_id=09dba888a0c5beb7cadcb74ac8ffe96c52197df0de63eac2da86f6ea12c86fa5 > src/resources/data.json
 
-=======
->>>>>>> jiang
       - name: Save JSON data to repository
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "GitHub Actions"
-<<<<<<< HEAD
-          git checkout -b jiang
-=======
-          git checkout jiang || git checkout -b jiang
->>>>>>> jiang
+          git checkout -B main 
           git pull
-          git add src/resources/data.json
+          git add src/resources/data.json  # Change data.`json to data.json
           git commit -m "Update data.json"
-          git push origin jiang
+          git push origin main
         env:
-          GITHUB_TOKEN: ${{ secrets.ACTION_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
