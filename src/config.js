@@ -4,9 +4,9 @@ const CONFIG = {
     'whiteboard_id': '09dba888a0c5beb7cadcb74ac8ffe96c52197df0de63eac2da86f6ea12c86fa5',
     'title': '稻流Daoliu', // 站点标题
     'pages': {
-        'About': '6cca6d23-f99d-43b0-ae17-a55475571a3c',
-        'Action': '87247526-363e-4ce0-9a62-49d6b5413650',
-        'Archive': 'bc675d03-0479-4f07-999a-a8c4f60a166c'
+        '關於我': '6cca6d23-f99d-43b0-ae17-a55475571a3c',
+        '實踐': '87247526-363e-4ce0-9a62-49d6b5413650',
+        '封存': 'bc675d03-0479-4f07-999a-a8c4f60a166c'
     }
 }
 
